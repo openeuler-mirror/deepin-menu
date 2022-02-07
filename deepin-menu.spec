@@ -1,6 +1,6 @@
 Name:           deepin-menu
 Version:        5.0.1
-Release:        3
+Release:        4
 Summary:        Deepin menu service
 License:        GPLv3+
 URL:            https://github.com/linuxdeepin/deepin-menu
@@ -15,6 +15,7 @@ BuildRequires:  dde-qt-dbus-factory-devel
 BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:  pkgconfig(Qt5Widgets)
+BuildRequires:  qt5-qtbase-private-devel
 
 %description
 Deepin menu service for building beautiful menus.
@@ -38,6 +39,9 @@ sed -i 's|/usr/bin|%{_libexecdir}|' data/com.deepin.menu.service \
 %{_datadir}/dbus-1/services/com.deepin.menu.service
 
 %changelog
+* Mon Feb 07 2022 liweigang <liweiganga@uniontech.com> - 5.0.1-4
+- fix build error
+
 * Fri Aug 28 2020 chenbo pan <panchenbo@uniontech.com> - 5.0.1-3
 - fix compile fail
 
